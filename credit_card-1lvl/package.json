@@ -1,0 +1,16 @@
+{
+  "name": "credit_card-1lvl",
+  "version": "1.0.0",
+  "description": "ДЗ к уроку 10 модуля 3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kibrin Eduard",
+  "license": "ISC",
+  "dependencies": {
+    "credit-card-space": "^1.4.2",
+    "creditcardutils": "^1.0.0",
+    "redom": "^3.27.1"
+  }
+}

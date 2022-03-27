@@ -1,0 +1,15 @@
+{
+  "name": "credit-card-2lvl",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Eduard Kubrin",
+  "license": "ISC",
+  "dependencies": {
+    "imask": "^6.4.2",
+    "redom": "^3.27.1"
+  }
+}
