@@ -21,9 +21,23 @@ const cardnumberMask = IMask(cardnumber, {
 });
 //cardnumberMask.on('complete');
 const expirationdate = document.getElementById('expirationdate');
-const dateMask = IMask(expirationdate, {
-  mask: '00/00',
+new IMask(expirationdate, {
+  mask: 'MM/YY',
+  lazy: true,
+
+  blocks: {
+    YY: {
+      mask: '00',
+    },
+
+    MM: {
+      mask: IMask.MaskedRange,
+      from: 1,
+      to: 12
+    },
+  }
 });
+
 const securitycode = document.getElementById('securitycode');
 const ccicon = document.getElementById('ccicon');
 const svgname = document.getElementById('svgname');
@@ -36,7 +50,8 @@ const darkcolor = document.querySelectorAll('.darkcolor');
 
 name.addEventListener('input', () => {
   if (name.value !== '') {
-    svgname.textContent = name.value.toUpperCase();
+    name.value = name.value.toUpperCase().replace(/[^A-Z\s]/g, '');
+    svgname.textContent = name.value;
   } else svgname.textContent = 'YOUR NAME';
   svgnameback.textContent = svgname.textContent;
 });
